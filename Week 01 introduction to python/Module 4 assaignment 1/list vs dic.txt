@@ -1,0 +1,16 @@
+
+List:
+1. A list is a order of a collection of element
+2. list represent by '[]' and elements are seperated by comma
+3. elements in the list can be access using their index position
+4. List is muitable that's mean it can modify a elements in list assaign by a new value
+5. List are suitable for storing a collection of simillar or different types
+    of elements in an ordered manner
+
+
+Dictionary:
+1. A Dictionary is a unordered collection of a key valuepair.
+2. A Dictionary is represent by '{}' and the key value pairs are seperated by commas
+3. elements in the keys can be assaign by it's corresponding keys
+4. Dictionaries are useful to store and retrive values based on unique keys
+5. Dictionaries do not maintain any specific order

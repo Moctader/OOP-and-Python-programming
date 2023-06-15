@@ -1,0 +1,39 @@
+
+*args:
+*args is used to pass a variable of non keyword argument to a function. The '* args' parameter
+collects all the positional argument passed to a function into a tuple
+
+def sum_num(*args):
+    totall=0
+    for i in args:
+        totall+=in
+    return totall
+
+print(sum_num(1,5,6))
+output:12
+
+int the example 'sum_num'function accepts a variable number of a arguments using '*args'
+The argument passed to the function to collected as a tuple name 'args'. The function
+then calculated the sum of the all numbers in the 'args' tuple.
+
+
+**kwargs:
+'**kwargs' is used to pass a variable number of keyword argument to a function.
+The **kwargs parameter collects all the keyword arguments pass to a function into a 
+Dictionary, where the keys are the argument names and the values are the corresponding 
+values.
+
+def all_details(**kwargs):
+    for key value in kwargs:
+        print(f"{key}: {value})
+
+all_details(name="ali", age=43, location="BD")
+
+output:
+name=ali
+age=43
+location=BD
+
+int the all_details funtion accepts to a variable number of keyword argument using'**kwargs'
+the keyword arguments passed to the function are collected into a Dictionary named 'kwargs'
+The function then iterates over the Dictionary and print each key value pair.
