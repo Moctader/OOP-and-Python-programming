@@ -1,0 +1,47 @@
+Write the advantages of using inner functions in Python OOP. Provide specific 
+use cases where inner functions can enhance code readability and organization. 
+(note: answer with proper examples).
+
+
+Using inner function in oop can offer several advantages. include improve code readability
+encapsulation and organization. Here are some use cases where the inner functions can
+enhance the aspects:
+
+1.encapsulation and information Hiding: 
+Inner functions allows to encapsulate logic within a class, hiding in from
+the outside world. They can be use to define helper functions or utility that are 
+intended to use within the class, By keeping these functions as inner functions it
+can not be used or accessed directly by external code.
+
+class calculator:
+    def calculate(self,a b):
+        def add():
+            return a+b
+        
+        def subtract():
+            return a-b
+
+        def multy():
+            return a*b
+
+        def divide():
+            return a/b
+
+        result={
+            "addition"=add()
+            "subtraction=subtract()
+            "multipliction"=multy()
+            "division"=divide()
+        }
+
+Here the inner function are encasulated within 'calculate()' method and are not 
+intended for direct external access
+
+
+2. improve code readability:
+
+    Inner function can improve code readability by keeping related functionality 
+    togather. It allows to define functions that are closely related to the maki
+    logic of a class. making the code more organized and easier to understand. 
+    inner function can also access the variables and parameters of the outer 
+    function.promoting code reuse and reducing duplication

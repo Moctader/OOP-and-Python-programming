@@ -1,0 +1,110 @@
+Write down the differencesbetween class method and static method of Python with 
+proper examples.(at least 3)
+
+1. usage and accesssing method argument:
+    class Method: A class method takes the classs itself as the first argument allowing 
+    access to claa specific methods
+
+    Myclass class:
+        count =0
+
+        @classmethod
+        def increse_count(cls):
+            self.count+=1
+
+        @classmethod
+        def get_count(cls):
+            return cls.count
+
+        print(Myclass.get_count())
+
+
+    static Method: A static method does not have any special first argument. it behaves 
+    like a regular function and does not have access to class specific attributes 
+    or methods
+
+    class Myresult:
+        @staticmethod
+        def add(a,b):
+            return a+b
+
+    result=add(3,4)
+    print(result)
+
+
+2. Accessing class attributes
+    class Method: Class Methods can access and modify class attributes because they 
+    recive the class as an argument
+
+    classs circle:
+        pi=3.1416
+
+        def __init__(self, radious):
+            self.radious=radious
+        
+        @classmethod
+        def from_diameter(cls, diameter):
+            radious=diameter/2
+            return cls(radious)
+
+    circle=circle.from_diameter(6)
+    print(circle.radious)
+
+
+    Static Method: static method can not access and modify class
+    attributes directly, They believe like regularfunctions that
+    are defined with class's namespace
+
+    class circle:
+        pi=3.1416
+
+        def __init__(self, radious):
+            self.radious=radious
+        @staticmethod
+        def calculate_area:
+            return circle.pi*(self.radious**2)
+
+        circle=circle(5)
+        area=circle.calculate_area()
+
+    Raises and attributeError
+
+
+3. inheritance and overridding
+    Class Method: class methods are inherited and can be overridden
+    by subclasses. when a subclasses overrides a class method, The 
+    subclass's implementation is called when the method are access 
+    through a subclass
+
+    class vehicle:
+        @classmethod
+        def print_description(cls):
+            print("This is a vehicle")
+
+    class car(vehicle):
+        @classmethod
+        def print_description(cls):
+            print('This is car')
+
+    vehicle.print_description()
+    car.print_description()
+
+
+    static Method: Static method are also inherited but they can not overridden by 
+    subclasses. The static method of the parent clas will always be called, even 
+    when accessed through a subclass
+
+    class vehicle:
+        @staticmethod
+        def make_noise():
+            print('not ok')
+        
+    class car(vehicle):
+    @staticmethod
+    def make_noise():
+    print('ok')
+
+    vehicle.make_noise()
+    car.make_noise()
+    output remain always not ok
+        

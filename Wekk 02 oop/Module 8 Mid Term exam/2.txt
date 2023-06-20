@@ -1,0 +1,52 @@
+Explain with proper examples what is meant by polymorphism in Python.
+
+polymorphism is a fundamental concept in object oriented programming  that allows
+object in different classes to be treated as a objects of a common base class.
+it enables different object to respond to call same mthod call in different ways 
+based on their specific implementation. polymorphism promotes code reuseblity, flexibility
+and modularity. in python polymorphism is achieved through method overloading and
+method overridding
+
+Method overrriding:
+Method overloading occurs when a subclass defines a method with the same name as A
+method in the subclass replaces the method inheroted from the superclass.Allowing 
+the subclass to provise it's specific implementation
+
+    class animal:
+        def sound(self):
+            print("Animal make sound")
+    
+    class Dog(animal):
+        def dog_sound(self):
+            print("dog sound")
+    
+    class cat(animal):
+        def cat_sound(self):
+            print("Cat sound)
+
+    animal.sound()
+    output: Animal make sound
+    dog.sound()
+    output: dog cat_sound
+    cat.sound()
+    output: Cat sound
+
+
+Method oveloading:
+Method oveloading refers to defining multiple method with the same name but with 
+different parameters or argument types. Python does not support oveloading is the 
+traditional sense, as it does not allow multiple method wit the smae name in a class.
+However polymorphic behaviour can be achieve by using  variable arguments(*args,
+**Kwargs)to creat method that can handle different sets of arguments
+
+clas Math:
+    def add(self, x,y):
+        return x+your
+    def add(self, x,y,z)
+        return x+y+z
+
+result=math()
+print(result.add(4,5))
+output:9
+print(result.add(5,6,7))
+output:18

@@ -1,0 +1,26 @@
+Multilevel inheritance in python refers to a scenario where a derived class(subclass)
+inherits from another derived subclass(sub-subclass). In other words it involves in
+creating a chain of inheritence with multiple levels. Each level represents 
+a new class that inherits attributes and method from it's imediate superclass.
+This allows for the reuse of code and the creation of a hierarchical relationship between
+classes.
+
+
+Here is the examples are given below:
+class animal:
+    def eat(self):
+        print("animal is eating")
+    
+class dog(animal):
+    def dog_sound(self):
+        print("dog is making sound")
+
+class cat(dog):
+    def cat_sound(self):
+        print("cat is making sound")
+
+
+sound=animal()
+sound.eat()          output: Animal is eating
+sound.dog_sound()    output: dog is making sound
+sound.cat_sound()    output: cat is making sound
