@@ -35,6 +35,7 @@ def main():
             else:
                 while True:
                     
+                    company1=Admin('name',1223)
                     print("hello admin")
                     print("1. Create an account\n2. exit\n3. Totall_balace\n4. Toall loan amount\n5. feature control")
                     
@@ -44,11 +45,11 @@ def main():
                     elif user_input==1:
                         company.create_account()  
                     elif user_input==3:
-                        company.check_bank_balance()
+                        company1.check_bank_balance()
                     elif user_input==4:
-                        company.check_loan_amount()
+                        company1.check_loan_amount()
                     elif user_input==5:
-                        company.loan_feature_function(True)
+                        company1.loan_feature_function(True)
                         
                             
                 

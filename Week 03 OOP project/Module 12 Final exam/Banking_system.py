@@ -51,7 +51,7 @@ class Account_name(User):
                 print(f'Withdraw {amount} from account name: {self.account_name}')
                 self.check_balance()
             else:
-                print("Insufficient Balance")
+                print("bank is bankrupt")
                 
     def transection_history(self):
         #print(f'Transection history for account: {self.account_name}')
@@ -71,13 +71,21 @@ class Account_name(User):
                 #self.totall_loan+=loan_amount
                 Account_name.Total_loan+=loan_amount
                 print(f'loan granted: {loan_amount} for the account {self.account_name}')
-                        
-            
+                
     def check_balance(self):
         print(f'Account Name: {self.account_name} Balance: {self.balance}')
+                        
+            
+  
         
-    def totall_loan_amount(self):
-        print(f'totall loan: {self.totall_loan}')
+        
+class Admin(User):
+    def __init__(self, username, password) -> None:
+        super().__init__(username, password)
+
+        
+    # def totall_loan_amount(self):
+    #     print(f'totall loan: {self.totall_loan}')
     
     def check_bank_balance(self):
         print(f'Totall bank balance: {Account_name.Totall_money}')
@@ -92,5 +100,4 @@ class Account_name(User):
         else:
             status="disabled"
         print(f'The loan feature has been: {status}')
-        
         
