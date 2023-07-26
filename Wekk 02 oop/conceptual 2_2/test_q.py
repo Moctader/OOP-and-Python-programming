@@ -164,7 +164,7 @@ while True:
             if flag:
                 while True:
                     print("Welcome to Bus Ticket Booking System")
-                    print("1. Available Buseu\n2. Show Bus info\n3. Reservation\n4. Exit")
+                    print("1. Available Buseu\n2. Show Bus info\n3. Reservationq\n4. Exit")
                     a=int(input("Enter your choice"))
                     if a==4:
                         break
